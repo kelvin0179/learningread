@@ -84,7 +84,7 @@ yarn install && yarn start
 ```bash
 npm run build
 npm install netlify-cli -g
-netlif login
+netlify login
 netlify deploy --dir=public --prod
 ```
 
