@@ -27,6 +27,8 @@ pm2 start server.js
 pm2 startup ubuntu
 ```
 
+You should now be able to access your app using your IP and port. Now we want to setup a firewall blocking that port and setup NGINX as a reverse proxy so we can access it directly using port 80 (http)
+
 ## Local Run Frontend
 
 To run the Frontend locally on Port `3000`
