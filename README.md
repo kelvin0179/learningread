@@ -3,7 +3,7 @@
 
 ## Local Run Backend
 
-To run the Backend locally on Port `8080` and `8081`
+* To run the Backend locally on Port `8080` and `8081`
 
 ```bash
 cd Backend
@@ -27,7 +27,46 @@ pm2 start server.js
 pm2 startup ubuntu
 ```
 
-You should now be able to access your app using your IP and port. Now we want to setup a firewall blocking that port and setup NGINX as a reverse proxy so we can access it directly using port 80 (http)
+* You should now be able to access your app using your IP and port. Now we want to setup a firewall blocking that port and setup NGINX as a reverse proxy so we can access it directly using port 80 (http)
+
+### Setup UFW Firewall
+
+```bash
+sudo ufw enable
+sudo ufw status
+sudo ufw allow ssh (Port 22)
+sudo ufw allow http (Port 80)
+sudo ufw allow https (Port 443)
+```
+
+### Install NGINX and configure
+
+```bash
+sudo apt install nginx
+sudo nano /etc/nginx/sites-available/default
+```
+
+* The Comments should be sufficient to guide you.
+
+```bash
+# Check NGINX config
+sudo nginx -t
+
+# Restart NGINX
+sudo service nginx restart
+```
+
+### Add SSL with LetsEncrypt
+
+```bash
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+# Only valid for 90 days, test the renewal process with
+certbot renew --dry-run
+```
 
 ## Local Run Frontend
 
