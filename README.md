@@ -1,5 +1,8 @@
 # XMeme
 
+### [Public Frontend](https://mohitjaiswalxmeme.netlify.app)
+
+### [Public Backend](https://xmeme.mohitjaiswal.studio/memes) 
 
 ## Local Run Backend
 
