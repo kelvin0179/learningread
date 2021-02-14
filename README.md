@@ -70,13 +70,24 @@ certbot renew --dry-run
 
 ## Local Run Frontend
 
-To run the Frontend locally on Port `3000`
+* To run the Frontend locally on Port `3000`
 
 ```bash
 cd Frontend
 yarn install && yarn start
-cd ..
 ```
+
+## Frontend Deployment
+
+* To Deploy on Netlify
+
+```bash
+npm run build
+npm install netlify-cli -g
+netlif login
+netlify deploy --dir=public --prod
+```
+
 
 
 
