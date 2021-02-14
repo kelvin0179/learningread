@@ -3,7 +3,7 @@
 
 ## Local Run Backend
 
-To run the Backend locally on Port 8080 and 8081
+To run the Backend locally on Port `8080` and `8081`
 
 ```bash
 cd Backend
@@ -13,7 +13,7 @@ cd..
 
 ## Local Run Frontend
 
-To run the Frontend locally on Port 3000
+To run the Frontend locally on Port `3000`
 
 ```bash
 cd Frontend
