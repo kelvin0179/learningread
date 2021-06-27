@@ -112,8 +112,8 @@ sudo service nginx restart
 ### Example
 
 * My Domain name is `mohitjaiswal.studio`.
-* My SubDomain is `xmeme`.
-* So the name of two `A` records are `xmeme.mohitjaiswal.studio` and `*.xmeme.mohitjaiswal.studio`.
+* My SubDomain is `mailhub`.
+* So the name of two `A` records are `mailhub.mohitjaiswal.studio` and `*.mailhub.mohitjaiswal.studio`.
 
 ## Edit Server Name in NGINX
 
